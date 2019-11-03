@@ -16,16 +16,16 @@ jobs:
       python: "3.6"
       install:
         - pip install tox
-    - env: TOXENV=py27-flake8
-      python: "2.7"
+    - env: TOXENV=py37-flake8
+      python: "3.7"
       install:
         - pip install tox
     - env: TOXENV=py36-flake8
       python: "3.6"
       install:
         - pip install tox
-    - env: TOXENV=py27
-      python: "2.7"
+    - env: TOXENV=py37
+      python: "3.7"
       install:
         - pip install tox
         - docker pull pierky/bird:1.6.7
@@ -36,8 +36,8 @@ jobs:
         - pip install tox
         - docker pull pierky/bird:1.6.7
         - docker pull pierky/openbgpd:6.5p1
-    - env: TOXENV=py27-coverage
-      python: "2.7"
+    - env: TOXENV=py37-coverage
+      python: "3.7"
       install:
         - pip install tox
         - pip install coveralls
@@ -52,8 +52,8 @@ jobs:
         - pip install tox
       before_script:
         - ./tests/external_resources/install_bgpq3.sh
-    - env: TOXENV=py27-extres
-      python: "2.7"
+    - env: TOXENV=py37-extres
+      python: "3.7"
       install:
         - pip install tox
       before_script:
